@@ -87,9 +87,7 @@ let computerScore = 0;
 function playRound (humanChoice, computerChoice) {
    
    if (humanChoice === computerChoice) {
-      computerScore++;
-      humanScore++;
-      return "A tie means a point for both of you!";
+      return "A tie - no points for anyone!";
    } else if ((humanChoice === "rock") && (computerChoice === "scissors")) {
       humanScore++;
       return "A point for the Human! Rock breaks scissors.";
