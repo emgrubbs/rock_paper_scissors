@@ -61,19 +61,21 @@ function getComputerChoice() {
 //console.log(getComputerChoice());
 
 
-let answer = prompt("rock, paper, or scissors?")
+//let answer = prompt("rock, paper, or scissors?")
 function prompty () {
-   return prompt("I SAID ROCK, PAPER, OR SCISSORS, BITCH?");
+  return prompt("I SAID ROCK, PAPER, OR SCISSORS???");
 }
 function getHumanChoice() {  
-   if (answer === "" || answer === null) {
+   let answer = prompt("rock, paper, or scissors?");
+   if ((answer === "") || (answer === null)) {
       return prompty();
       }
-   else {
+  else {
       return answer.toLowerCase();
-   }
+      }
    }
 //console.log(getHumanChoice());
+
 
 
 let humanScore = 0;
@@ -87,35 +89,35 @@ function playRound (humanChoice, computerChoice) {
    if (humanChoice === computerChoice) {
       computerScore++;
       humanScore++;
-      return "It's a tie!";
+      return "A tie means a point for both of you!";
    } else if ((humanChoice === "rock") && (computerChoice === "scissors")) {
       humanScore++;
-      return "Human wins! Rock breaks scissors.";
+      return "A point for the Human! Rock breaks scissors.";
    } else if ((humanChoice === "rock") && (computerChoice === "paper")) {
       computerScore++;
-      return "Computer wins! Paper covers rock.";
+      return "A point for the Robot! Paper covers rock.";
    } else if ((humanChoice === "paper") && (computerChoice === "scissors")) {
       computerScore++;
-      return "Computer wins! Scissors cut paper.";
+      return "A point for the Robot! Scissors cut paper.";
    } else if ((humanChoice === "paper") && (computerChoice === "rock")) {
       humanScore++;
-      return "Human wins! Paper covers rock.";
+      return "A point for the Human! Paper covers rock.";
    } else if ((humanChoice === "scissors") && (computerChoice === "paper")) {
       humanScore++;
-      return "Human wins! Scissors cut paper.";
+      return "A point for the Human! Scissors cut paper.";
    } else if ((humanChoice === "scissors") && (computerChoice === "rock")) {
       computerScore++;
-      return "Computer wins! Rock breaks scissors.";
+      return "A point for the Robot! Rock breaks scissors.";
    } else {
       return "Error";
    }
 }
 
-let humanSelection = getHumanChoice();
+//let humanSelection = getHumanChoice();
 
-let computerSelection = getComputerChoice();
+//let computerSelection = getComputerChoice();
 
-//console.log(playRound(humanSelection, computerSelection));
+//console.log(playRound(getHumanChoice(), getComputerChoice()));
 
 
 
@@ -124,12 +126,14 @@ function playGame()  {
       console.log(playRound(getHumanChoice(), getComputerChoice()));
    }
    if (humanScore > computerScore){
-      return "The human wins!";
+      return "THE HUMAN WINS!";
    } else if (humanScore < computerScore) {
-      return "Robots rule!";
+      return "THE ROBOT WINS!";
    }else {
-      return "It's a goddamn tie.";
+     // console.log("It's a goddamn tie.");
+      return "IT'S A GODDAMN TIE.";
    }
+   
    }
       
    
@@ -137,7 +141,9 @@ function playGame()  {
 
 console.log(playGame());
 
-console.log(humanScore);
-console.log(computerScore);
-console.log(humanSelection);
-console.log(computerSelection);
+
+
+console.log("human score: " + humanScore);
+console.log("robot score: " + computerScore);
+//console.log(humanSelection);
+//console.log(computerSelection);
