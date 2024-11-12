@@ -131,7 +131,7 @@ function playGame()  {
       return "THE ROBOT WINS!";
    }else {
      // console.log("It's a goddamn tie.");
-      return "IT'S A GODDAMN TIE.";
+      return "IT'S A DAMN TIE.";
    }
    
    }
