@@ -1,4 +1,3 @@
-
 function getComputerChoice() {
    let random = (Math.floor(Math.random() * 30));                 
    if (random >= 0 && random <=14) {
@@ -10,10 +9,6 @@ function getComputerChoice() {
    }
 }
 
-//console.log(getComputerChoice());
-
-
-//let answer = prompt("rock, paper, or scissors?")
 function prompty () {
   return prompt("I SAID ROCK, PAPER, OR SCISSORS???");
 }
@@ -22,22 +17,15 @@ function getHumanChoice() {
    if ((answer === "") || (answer === null)) {
       return prompty();
       }
-  else {
+   else {
       return answer.toLowerCase();
       }
    }
-//console.log(getHumanChoice());
-
-
 
 let humanScore = 0;
 let computerScore = 0;
 
-//let humanChoice = "scissors";
-//let computerChoice = "scissors";
-
 function playRound (humanChoice, computerChoice) {
-   
    if (humanChoice === computerChoice) {
       return "A tie - no points for anyone!";
    } else if ((humanChoice === "rock") && (computerChoice === "scissors")) {
@@ -63,14 +51,6 @@ function playRound (humanChoice, computerChoice) {
    }
 }
 
-//let humanSelection = getHumanChoice();
-
-//let computerSelection = getComputerChoice();
-
-//console.log(playRound(getHumanChoice(), getComputerChoice()));
-
-
-
 function playGame()  {
    for (let i = 0; i < 5; i++) {
       console.log(playRound(getHumanChoice(), getComputerChoice()));
@@ -88,15 +68,6 @@ function playGame()  {
       console.log("robot score: " + computerScore);
       return "IT'S A DAMN TIE.";
    }
-   
-   }
-      
-
+}
 
 console.log(playGame());
-
-
-
-
-//console.log(humanSelection);
-//console.log(computerSelection);
